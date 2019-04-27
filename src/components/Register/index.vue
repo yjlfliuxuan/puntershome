@@ -7,9 +7,9 @@
     </div>
     <div class="dialogmain">
       <el-steps :active="active" space='200' simple>
-        <el-step title="创建用户" icon="icon-xuhao-1">1</el-step>
-        <el-step title="填写身份信息" icon="icon-xuhao1">2</el-step>
-        <el-step title="完成" icon="icon-xuhao">3</el-step>
+        <el-step title="创建用户" icon="newel-icon-xuhao-1">1</el-step>
+        <el-step title="填写身份信息" icon="newel-icon-xuhao1">2</el-step>
+        <el-step title="完成" icon="newel-icon-xuhao">3</el-step>
       </el-steps>
       <div class="createuser" v-if="active===0">
         <div class="formeleone">
@@ -67,11 +67,14 @@ export default {
   name: 'registerindex',
   data () {
     return {
-      active: 0
+      active: 0,
+      timer: ''
     }
   },
   methods: {
     closealert () {
+      this.active = 0
+      clearTimeout(this.timer)
       $('.alert_p').hide()
     },
     next () {
@@ -82,7 +85,7 @@ export default {
         $('.registerdialog').height('400')
       }
       if (this.active === 2) {
-        setTimeout(function () {
+        this.timer = setTimeout(function () {
           $('.alert_p').hide()
           this.$router.push('/homepage')
         }, 3000)
