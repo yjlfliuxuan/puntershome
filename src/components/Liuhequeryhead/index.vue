@@ -11,11 +11,11 @@
     </div>
     <div class="list">
     <ul>
-      <li @click="changeroute('liuhelotteryrecord', '历史开奖记录')">开奖记录查询</li>
-      <li @click="changeroute('liuhecondition','历史开奖条件查询')">按条件查询</li>
-      <li @click="changeroute('liuhecommonsense','六合常识查询')">六合常识查询</li>
-      <li @click="changeroute('liuhelotterydate','搅珠日期查询')">开奖日期查询</li>
-      <li @click="changeroute('liuhelongestnotopen','最久不开')">最久不开</li>
+      <li @mouseover="addactive($event)" @mouseout="removeactive($event)" @click="changeroute('liuhelotteryrecord', '历史开奖记录')">开奖记录查询</li>
+      <li @mouseover="addactive($event)" @mouseout="removeactive($event)" @click="changeroute('liuhecondition','历史开奖条件查询')">按条件查询</li>
+      <li @mouseover="addactive($event)" @mouseout="removeactive($event)" @click="changeroute('liuhecommonsense','六合常识查询')">六合常识查询</li>
+      <li @mouseover="addactive($event)" @mouseout="removeactive($event)" @click="changeroute('liuhelotterydate','搅珠日期查询')">开奖日期查询</li>
+      <li @mouseover="addactive($event)" @mouseout="removeactive($event)" @click="changeroute('liuhelongestnotopen','最久不开')">最久不开</li>
     </ul>
     </div>
   </div>
@@ -60,6 +60,12 @@ export default {
         localStorage.setItem('currentpathname', '最久不开')
         this.$router.push({ name: 'liuhelongestnotopen', params: { curpath: 'liuhelongestnotopen', title: '最久不开' } })
       }
+    },
+    addactive ($event) {
+      $event.currentTarget.className = 'bground'
+    },
+    removeactive ($event) {
+      $event.currentTarget.className = ''
     }
   }
 }
@@ -101,6 +107,10 @@ export default {
        display: flex;
        justify-content: flex-start;
        align-items: center;
+       .bground{
+         background:#F2F2F2;
+         color:black;
+       }
        li{
          width: 120px;
          margin-right:4px;
