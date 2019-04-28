@@ -33,7 +33,7 @@
           </div>
           <div class="helpcenter">
              <img src="@/images/wen.png">
-             <span>帮助中心</span>
+             <span @click="switchList('faq')">帮助中心</span>
           </div>
         </div>
         </div>
@@ -212,6 +212,7 @@ export default {
       } else if (type === 'faq') {
         $('#homeweb').addClass('bgcolor')
         this.$router.push({ path: '/faq' })
+        $('.faq').show()
       }
     }
   }
