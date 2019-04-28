@@ -2,7 +2,7 @@
   <div class="mystery">
     <el-tabs tab-position="left" style="height: 640px;">
       <el-tab-pane>
-        <span slot="label">每期玄机<i class="icon-arrow-fill-right" style="float:right;color:#F5F5F5;font-size: 12px;"></i></span>
+        <span slot="label">每期玄机<i class="newel-icon-arrow-fill-right" style="float:right;color:#F5F5F5;font-size: 12px;"></i></span>
         <div class="contentarea">
           <span class="listtitle">每期玄机</span>
           <ul class="listul">
@@ -22,7 +22,7 @@
         </div>
       </el-tab-pane>
       <el-tab-pane>
-        <span slot="label">全年玄机<i class="icon-arrow-fill-right" style="float:right;color:#F5F5F5;font-size: 12px;"></i></span>
+        <span slot="label">全年玄机<i class="newel-icon-arrow-fill-right" style="float:right;color:#F5F5F5;font-size: 12px;"></i></span>
         <div class="contentarea">
           <span class="listtitle">全年玄机</span>
           <ul class="listul">
@@ -52,7 +52,7 @@ export default {
     return {
       currentPage1: 1,
       totalobj: {}, // totalobj是需要以currentPage1和 pageSize为参数向后台发送请求来返回的一个对象,对象里必须有total数据总条数和当前页的条数（数据集合）
-      pageSize: 5,
+      pageSize: 10,
       pagercount: 5
     }
   },
@@ -65,7 +65,7 @@ export default {
         '011期：妖魔买特码/传密一肖诗/特码爆一爆/手机短信王/智力金壤',
         '012期：妖魔买特码/传密一肖诗/特码爆一爆/手机短信王/智力金壤',
         '013期：妖魔买特码/传密一肖诗/特码爆一爆/手机短信王/智力金壤'],
-      total: 38
+      total: 80
     }
   },
   methods: {

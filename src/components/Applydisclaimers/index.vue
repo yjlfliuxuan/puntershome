@@ -2,14 +2,14 @@
     <div class="applydisclaimer">
       <el-tabs tab-position="left" style="height: 600px;">
         <el-tab-pane>
-          <span slot="label">关于应用<i class="icon-arrow-fill-right" style="float:right;color:#F5F5F5;font-size: 12px;"></i></span>
+          <span slot="label">关于应用<i class="newel-icon-arrow-fill-right" style="float:right;color:#F5F5F5;font-size: 12px;"></i></span>
           <div>
             <span>关于应用</span>
             <p>本app是一款由香港科技有限公司研发的，一款面向香港地区提供六合彩咨询的免费软件。是基于公平公正公开的原则下，提供一个共享的平台。</p>
           </div>
         </el-tab-pane>
         <el-tab-pane>
-          <span slot="label">免责声明<i class="icon-arrow-fill-right" style="float:right;color:#F5F5F5;font-size: 12px;"></i></span>
+          <span slot="label">免责声明<i class="newel-icon-arrow-fill-right" style="float:right;color:#F5F5F5;font-size: 12px;"></i></span>
           <div>
           <span>免责声明</span>
           <p>本app是一款供香港地区人士提供六合彩参考咨询的平台，对于使用本应用内喜讯出现的任何问题，本公司不承担责任。</p>
